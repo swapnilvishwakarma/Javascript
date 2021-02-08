@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Dragon Slayer Game</title>
+</head>
+<body>
+
+  <script>
+
+    var name = prompt("What is your name?")
+    if (name) {
+      yes = confirm("Hello " + name + ", Would you like to play?")
+
+      if (yes) {
+        yess = confirm("Would you like to battle the dragon?")
+
+        if (yess) {
+          var random_boolean_outcome = Math.random()
+          console.log(random_boolean_outcome)
+          if (random_boolean_outcome > 0.5) {
+            alert("You defeated the dragon!!")
+          } else {
+            alert("You lost!!")
+          }
+
+        } else {
+          alert("Come back when you are brave enough!")
+        }
+
+      } else {
+      alert("Maybe next time..")
+      }
+    }
+    
+
+  </script>
+  
+</body>
+</html>
