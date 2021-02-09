@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arrow functions</title>
+</head>
+<body>
+
+  <p id="text"></p>
+
+  <script>
+
+    // ES6 Arrow functions
+
+    // var num1 = 5;
+    // var num2 = 10;
+
+    // var anonymousFunction = (num1, num2) => {
+    //   document.getElementById('text').innerHTML = num1 * num2;      
+    // }
+
+    // anonymousFunction(5, 2);
+
+      var anonymousFunction = num1 => {
+      document.getElementById('text').innerHTML = num1;      
+    }
+
+    anonymousFunction(5);
+
+  </script>
+  
+</body>
+</html>
