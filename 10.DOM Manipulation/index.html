@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM Manipulation</title>
+</head>
+<body>
+
+  <p class="hello">Hello, <span id="userName">user</span></p>
+  <p class="hello">Welcome back!</p>
+  <img>
+  <!-- <img id="img"> -->
+  <!-- <img class="img"> -->
+  <img>
+
+  <script>
+
+    // getElementById => This type is called camelView
+    var name = 'Chris';
+    document.getElementById('userName').innerHTML = name;
+    document.getElementById('userName').style.fontSize = '24px';
+
+    // getElementsByClassName
+    document.getElementsByClassName('hello')[1].style.color = 'purple'; // Since there are two classes with class='hello', it can be accessed by array indexing.
+
+    // getElementsByTagName
+    document.getElementsByTagName('p')[0].innerHTML = 'hacked .!.';
+
+    // querySelector
+    // document.querySelector('img').setAttribute('src', 'image.jpg');
+    // document.querySelector('#img').setAttribute('src', 'image.jpg'); // using id
+    // document.querySelector('.img').setAttribute('src', 'image.jpg'); // using class
+
+    // querySelectorAll
+    document.querySelectorAll('img')[0].setAttribute('src', 'image.jpg');
+    document.querySelectorAll('img')[1].setAttribute('src', 'image.jpg');
+
+  </script>
+  
+</body>
+</html>
