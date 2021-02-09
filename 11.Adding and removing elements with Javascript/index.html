@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adding and removing elements with Javascript</title>
+</head>
+<body>
+
+  <ul id="list">
+    <li>Apples</li>
+    <li>Pears</li>
+  </ul>
+
+  <script>
+
+    // document.write("Document write text");
+
+    // create element
+    var listItem = document.createElement('li');
+
+    // create textnode
+    var itemText = document.createTextNode('Bananas');
+
+    // add text to element
+    listItem.appendChild(itemText);
+
+    // select parent list
+    var list = document.getElementById('list');
+
+    // add new list item to the list
+    list.appendChild(listItem);
+
+    // create grapes list item
+    var newListItem = document.createElement('li');
+    var newItemText = document.createTextNode('Grapes');
+    newListItem.appendChild(newItemText);
+
+    var itemToReplace = document.querySelectorAll('li')[1];
+    list.replaceChild(newListItem, itemToReplace);
+
+    // remove item
+    list.removeChild(newListItem);
+
+  </script>
+  
+</body>
+</html>
