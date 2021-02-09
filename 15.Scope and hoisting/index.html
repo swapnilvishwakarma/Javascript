@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scope and hoisting</title>
+</head>
+<body>
+
+  <p id="text"></p>
+
+  <script>
+    // Global variable
+    var num1 = 5;
+    var num2 = 10;
+
+    multiply(); // Named functions are hoisted and stored in memory and hence it can be called before even defining it, unlike unnamed functions.
+
+    function multiply() {
+      // Local variable
+      // var num1 = 5;
+      // var num2 = 10;
+      document.getElementById('text').innerHTML = num1 * num2;
+    }
+
+    var x = 1; // Initialisation
+    alert(x + ' | ' + y);
+    var y = 2 // Declaration. To overcome this issue, always declare the variables at the top.
+
+  </script>
+  
+</body>
+</html>
