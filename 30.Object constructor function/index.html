@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Object constructor function</title>
+</head>
+<body>
+
+
+  <script>
+
+    // Constructor has starting letter as capital letter
+    function Character(firstName, lastName, color, image) {
+      this.firstName = firstName;
+      // console.log(this)
+      this.lastName = lastName;
+      this.color = color;
+      this.image = image;
+    }
+  
+    // Creating multiple objects with a constructor having same structure
+    var mickey = new Character('Mickey', 'Mouse', ['red', 'yellow', 'black'], 'mickey-mouse.png');
+    console.log(mickey);
+    var duffy = new Character('Duffy', 'Duck', ['black', 'orange'], 'duffy-duck.png');
+    var bugs = new Character('Bugs', 'Bunny', ['grey', 'white'], 'bugs-bunny.png');
+    console.log(bugs.lastName);
+
+  </script>
+</body>
+</html>
