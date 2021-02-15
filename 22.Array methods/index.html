@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Array methods</title>
+</head>
+<body>
+
+  <div id="animals"></div>
+
+  <script>
+    
+    var animals = ['cat', 'dog', 'tiger', 'giraffe', 'lion'];
+        
+    // Shift (removes first element from array)
+    // animal1 = animals.shift()
+    // console.log(animal1)
+
+    // Unshift (adds element(s) to beginning of array)
+    // animals.unshift('bird', 'snale');
+
+    // Push (adds element(s) to end of array)
+    // animals.push('bird', 'snale');
+
+    // Pop (removes last element from array)
+    // animals.pop();
+
+    // Splice (Adds or removes elements at index number)
+    animals.splice(2, 1, 'fish', 'monkey');
+
+    // Reverse
+    animals.reverse();
+
+    document.getElementById('animals').innerHTML = animals;
+  </script>
+</body>
+</html>
