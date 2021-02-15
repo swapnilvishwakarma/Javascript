@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Objects</title>
+</head>
+<body>
+
+  <script>
+  
+  // var character = new Object();
+  // character.firstName = 'Bugs';
+  // character.lastName = 'Bunny';
+  // character.image = 'bugs-bunny.png';
+  // character.color = 'grey';
+
+  var character = {
+    firstName: 'Bugs',
+    lastName: 'Bunny',
+    image: 'bugs-bunny.png',
+    color: ['grey', 'white'],
+    fullName: function() {          // This is called as method of an object
+      alert('My full name is ' + this.firstName + ' ' + this.lastName);
+    }
+  }
+
+  console.log(character.fullName());
+
+  // // dot notation
+  // console.log(character.color);
+
+  // // bracket notation
+  // console.log(character['color']);
+  
+  </script>
+</body>
+</html>
+
+
+<!-- 
+  JS Object is nothing but dictonary in python with key-value pairs.
+ -->
