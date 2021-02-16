@@ -38,8 +38,21 @@ const repeatRandomShape = () => {
     setInterval(() => {
         shape1 = selectRandomShape();
         shape2 = selectRandomShape();
-        console.log(shape1);
-        console.log(shape2);
+        // console.log(shape1);
+        // console.log(shape2);
+
+        // Template literals
+        const shape1Styles = `width:${shape1.width+'px'};
+                              background:${shape1.color};
+                              height:${shape1.height+'px'};`
+        
+        const shape2Styles = `width:${shape2.width+'px'};
+                              background:${shape2.color};
+                              height:${shape2.height+'px'};`
+
+        document.getElementById('shape1').style.cssText = shape1Styles;
+        document.getElementById('shape2').style.cssText = shape2Styles;
+
     }, 1000);
 };
 
@@ -48,7 +61,9 @@ document.getElementById('play').onclick = () => {
     repeatRandomShape();
 }
 
-
+// Using Backtick for template literals
+// let name = 'Swapnil'
+// console.log(`Hello ${name}`);
 
 
 
