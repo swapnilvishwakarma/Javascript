@@ -24,7 +24,22 @@ const shapes = [
     {color: '#6A4C93', width: 440, height: 160},
 ]
 
-console.log(shapes[2])
+const selectRandomShape = () => {
+    const randNum = Math.floor(Math.random()*shapes.length);
+    // console.log(randNum);
+
+    const randomSelection = shapes[randNum];
+    // console.log(randomSelection);
+
+    return randomSelection;
+}
+
+selectRandomShape();
+
+
+
+
+
 
 
 // let is similar to var. It has block scopingA
