@@ -10,6 +10,7 @@ let currentScore = 0;
 let playing = false;
 let shape1;
 let shape2;
+const matchBtn = document.getElementById('match');
 
 const shapes = [
     {color: '#FF595E', width: 250, height: 160},
@@ -36,6 +37,7 @@ const selectRandomShape = () => {
 
 const repeatRandomShape = () => {
     setInterval(() => {
+        matchBtn.disabled = false
         shape1 = selectRandomShape();
         shape2 = selectRandomShape();
         // console.log(shape1);
@@ -58,8 +60,26 @@ const repeatRandomShape = () => {
 
 // Start Playing
 document.getElementById('play').onclick = () => {
+    playing = true;
+    // Diasabling play button once the game starts
+    document.getElementById('play').disabled = true;
     repeatRandomShape();
 }
+
+// Comparing
+document.getElementById('match').onclick = () => {
+    if (playing) {
+        matchBtn.disabled = true
+        if (Object.is(shape1, shape2)) {
+            currentScore++;
+            document.getElementById('score').innerHTML = currentScore
+        } else {
+            currentScore--;
+            document.getElementById('score').innerHTML = currentScore
+        }
+    }
+}
+
 
 // Using Backtick for template literals
 // let name = 'Swapnil'
